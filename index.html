@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>工程参考工具库 · Engineering Reference Hub</title>
+<meta name="description" content="机械设计 / 电气设计 / 工程设计的在线参考工具集" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ 顶栏 ============ -->
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="brand" href="#top">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M12 2.6 20.2 7v10L12 21.4 3.8 17V7z"/>
+          <path d="M12 7.6 16.4 10v4.4L12 16.8 7.6 14.4V10z"/>
+        </svg>
+      </span>
+      <span class="brand__txt">
+        <strong>工程参考工具库</strong>
+        <em>ENGINEERING REFERENCE HUB</em>
+      </span>
+    </a>
+
+    <nav class="nav">
+      <a href="#top" class="nav__a is-on">首页</a>
+      <a href="#modules" class="nav__a">模块总览</a>
+      <a href="#about" class="nav__a">关于</a>
+    </nav>
+
+    <div class="topbar__tag"><span class="dot"></span><span id="tagLine">v0.2</span></div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ 首屏 ============ -->
+  <section class="hero">
+    <div class="wrap hero__in">
+      <div class="hero__eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <circle cx="12" cy="12" r="7.5"/><path d="M12 1.5v5M12 17.5v5M1.5 12h5M17.5 12h5"/>
+        </svg>
+        GB / ISO · MECHANICAL &nbsp;·&nbsp; ELECTRICAL &nbsp;·&nbsp; ENGINEERING
+      </div>
+
+      <h1 class="hero__title">设计选型，先查这里</h1>
+      <p class="hero__sub">
+        把标准、公式、规格与经验值收在一处。按模块进入对应参考工具，
+        减少翻手册与重复计算的时间。
+      </p>
+
+      <div class="search">
+        <svg class="search__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+          <circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.4 15.4 21 21"/>
+        </svg>
+        <input id="q" type="search" placeholder="搜索模块，例如：公差、齿轮、单位换算……" autocomplete="off" spellcheck="false" />
+        <kbd class="search__kbd">/</kbd>
+      </div>
+
+      <div class="chips" id="chips"></div>
+
+      <dl class="stats">
+        <div><dt id="statTotal">18</dt><dd>参考模块</dd></div>
+        <div><dt id="statCats">4</dt><dd>功能分类</dd></div>
+        <div><dt id="statLive">1</dt><dd>已上线页面</dd></div>
+      </dl>
+    </div>
+
+    <!-- 图纸角标装饰 -->
+    <span class="bl-corner bl-corner--tl" aria-hidden="true"></span>
+    <span class="bl-corner bl-corner--tr" aria-hidden="true"></span>
+  </section>
+
+  <!-- ============ 模块列表 ============ -->
+  <section class="modules wrap" id="modules">
+    <div id="groups"></div>
+    <p class="empty" id="empty" hidden>没有匹配的模块，换个关键词试试。</p>
+    <p class="count" id="count"></p>
+  </section>
+
+  <!-- ============ 关于 ============ -->
+  <section class="about wrap" id="about">
+    <div class="about__box">
+      <h2 class="sec__title"><span class="sec__sq"></span>关于本站 <em>ABOUT</em></h2>
+      <p>
+        这是一个面向机械设计、电气设计与工程设计的在线参考工具集。所有模块按类别归档，
+        目标是让查表、算参数、选型号这类高频动作都能在一个入口内完成。
+      </p>
+      <ul class="about__list">
+        <li><span>01</span>「公差配合」模块已接入可用的查询工具，点击卡片会在新标签页打开；其余模块标注「待接入」，地址补齐后自动转为可点击状态。</li>
+        <li><span>02</span>模块名称与分类来自「0-主页面/类别.xlsx」，接入地址写在「0-主页面/data.js」，新增只需改这一个文件。</li>
+        <li><span>03</span>允许离线使用：直接双击 index.html 即可打开，模块链接按相对路径解析，整个「AI工作库」目录整体搬移也不会断链。</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="dim" aria-hidden="true"><i></i><b></b><i></i></div>
+    <p>工程参考工具库 &nbsp;·&nbsp; ENGINEERING REFERENCE HUB &nbsp;·&nbsp; <span id="footVer">v0.2</span></p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

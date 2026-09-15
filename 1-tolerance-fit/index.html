@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="ZowSypUXimZmzgpr48Gt8L">
+<head data-page-node-id="aKQsJruhy5TW2uTY1RY5Uf">
+    <meta charset="UTF-8" data-page-node-id="LfBG1DWXElfSDGg7KE7PoQ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="KZcyGLs7D2U5dhvEqrj37c">
+    <title>机械设计公差查询 - GB/T 1800.1-2009</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="favicon-512.png">
+    <link rel="stylesheet" href="styles.css" data-page-node-id="6UGtDSGZyHBkwRUsqfPFrW">
+</head>
+<body data-page-node-id="ioDsXI5ewkK6cemEqL8ooC">
+    <div class="app" data-page-node-id="eCxEDbAFH19LtZ3WzAcPZ9">
+        <header class="header" data-page-node-id="eAyCip4v8VEMZFhk8eCEm3">
+            <h1 data-page-node-id="Sf1vop4ROED5KNYqbW7JC9">机械设计公差查询工具</h1>
+            <div class="subtitle" data-page-node-id="ltYl5Ftd80Z7mYyO2Vmn8Z">GB/T 1800.1-2009 / ISO 286-1 · 标准公差与孔轴配合查询</div>
+        </header>
+
+        <nav class="tab-bar" data-page-node-id="vybAADsB39cDlpD5or2ghb">
+            <button class="tab-btn active" data-tab="single" data-page-node-id="cAmex2p1AgzVRlAmYRuwmS">单尺寸公差查询</button>
+            <button class="tab-btn" data-tab="fit" data-page-node-id="ogkVBDa21hRyFKN8qYptVl">孔轴配合查询</button>
+            <button class="tab-btn" data-tab="table" data-page-node-id="zw8tzQ9eXtgApowuzAamV7">公差速查表</button>
+            <button class="tab-btn" data-tab="reference" data-page-node-id="z9wXqYr3sTgApowuzAamV8">参考数据</button>
+        </nav>
+
+        <main data-page-node-id="PprdDUVlhDVzmlhcEpk9Vn">
+            <!-- 单尺寸公差查询 -->
+            <section id="tab-single" class="tab-panel active" data-page-node-id="xcwRRoAjP0qBE1h9W3dGdf">
+                <div class="card" data-page-node-id="UNAcVqmCU2frUbSsYX6G0D">
+                    <div class="card-title" data-page-node-id="ssjMXNjjTmmW021Efd5fG8">输入参数</div>
+                    <div class="form-row" data-page-node-id="rt9xuwwMFWLi9uBisKfNof">
+                        <div class="form-group" data-page-node-id="xBhSQY3DEBwtKVMzDLzx3C">
+                            <label data-page-node-id="ybjNY5ZSzop2YTVDiik0C6">基本尺寸 (mm)</label>
+                            <input type="number" id="single-dim" value="50" step="0.01" min="0.01" max="500" data-page-node-id="bBlOL1Esw4hIbmt0x7S5fV">
+                        </div>
+                        <div class="form-group" data-page-node-id="00AyDAlZWFdMLBlGBBBkBs">
+                            <label data-page-node-id="RK5Tj0VIVcZrd1m2eoE9ah">基本偏差代号</label>
+                            <select id="single-letter" data-page-node-id="onjKmSMZeZPS8Ft2w5TUMZ">
+                                <optgroup label="孔 (大写)" data-page-node-id="zsxGGGDLXGwJiRJay1wsRM">
+                                    <option value="A" data-page-node-id="wzrR6D1sRXW1FWOWiyRBaT">A</option>
+                                    <option value="B" data-page-node-id="r6GvveHsiqew3uCtN60pqz">B</option>
+                                    <option value="C" data-page-node-id="lxLzSS39tvBZOGDpK0MKVA">C</option>
+                                    <option value="D" data-page-node-id="0k3I0oH581U1iGlgBX5vks">D</option>
+                                    <option value="E" data-page-node-id="4htKY4K14tO7QYYQpNHBSA">E</option>
+                                    <option value="F" data-page-node-id="GXPVnBv0vgYUYakIbJ0sBR">F</option>
+                                    <option value="G" data-page-node-id="eBGDA8HitJX8YmXvIlniQF">G</option>
+                                    <option value="H" selected data-page-node-id="Wo9JE9mhTS9pfwV3fCgQfO">H (基孔)</option>
+                                    <option value="JS" data-page-node-id="L4TR3bIqf4kTOE6anUXZMS">JS</option>
+                                </optgroup>
+                                <optgroup label="轴 (小写)" data-page-node-id="HFEw5br5KqUZ9xSQLsuEaX">
+                                    <option value="h" data-page-node-id="7PI4U8igR874mDhHnv5VBZ">h (基轴)</option>
+                                    <option value="g" data-page-node-id="LCvbeyoHrbRJF0bOgshF2C">g</option>
+                                    <option value="f" data-page-node-id="vzAKmgXucuOB8pekR197vY">f</option>
+                                    <option value="e" data-page-node-id="gEHAeeJ8PIjZYJJ3YGYATo">e</option>
+                                    <option value="d" data-page-node-id="3GD5YTIMc1937AxrjIshXL">d</option>
+                                    <option value="c" data-page-node-id="aioNZpViTFsLtyTZFTOfIY">c</option>
+                                    <option value="b" data-page-node-id="DW7W4LbqN322Bm5b2f6XEC">b</option>
+                                    <option value="a" data-page-node-id="lF1bArGQkzHPrL1jHuBYDV">a</option>
+                                    <option value="js" data-page-node-id="Yj9hI72u84bK5CGPFwKUqr">js</option>
+                                    <option value="k" data-page-node-id="FnV5RbXCG4Jd3qBrvc6N4u">k (过渡)</option>
+                                    <option value="m" data-page-node-id="i4hOvsBE1DbB66xjb9Q9KN">m</option>
+                                    <option value="n" data-page-node-id="NFN3MpaheEOlP1U4nSKF3l">n</option>
+                                    <option value="p" data-page-node-id="yhBy7ozGEmSdt22tYCEmGK">p</option>
+                                    <option value="r" data-page-node-id="EkZaBN84lq8DFRxs0xAAA4">r (过盈)</option>
+                                    <option value="s" data-page-node-id="G1kvGeNHB2lNNblreY8Rwk">s</option>
+                                    <option value="t" data-page-node-id="UZWwI7SDqsKy2Dx817nDAC">t</option>
+                                    <option value="u" data-page-node-id="puF9CwPxiwC89ocyrnHCTk">u</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="form-group" data-page-node-id="UOAPmwFIEw3mHc8o7CGfiB">
+                            <label data-page-node-id="N6IINBrc7GEVxzaBsA4GH7">公差等级</label>
+                            <select id="single-grade" data-page-node-id="q7DI93KsX6pljenlCNeQWX">
+                                <option value="01" data-page-node-id="U7CJ4fCwAAueceErziwWyO">IT01</option>
+                                <option value="0" data-page-node-id="M98ZjiwtfO999Gz6mpBg5o">IT0</option>
+                                <option value="1" data-page-node-id="E0ggvGij1zSEWd2z3IKOgt">IT1</option>
+                                <option value="2" data-page-node-id="N0Dsz9gALhPZGCDyx352yf">IT2</option>
+                                <option value="3" data-page-node-id="51jaFrX7yvn98exjQQnmJx">IT3</option>
+                                <option value="4" data-page-node-id="rWi20v07aNNiUTHQNHGOP0">IT4</option>
+                                <option value="5" data-page-node-id="Pgx6vfdXNi9GJvqLVX3ojB">IT5</option>
+                                <option value="6" data-page-node-id="9RXFPpAoILGhylwzKxScrf">IT6</option>
+                                <option value="7" selected data-page-node-id="BrpBEo7blbT0UA3a6SQFPe">IT7</option>
+                                <option value="8" data-page-node-id="6o4GUCDAY0HJzp2BjnRV49">IT8</option>
+                                <option value="9" data-page-node-id="sMqFZmH3KDbb6pV2KfDFRq">IT9</option>
+                                <option value="10" data-page-node-id="XYpC8yGnmbBueYvBuKIkaY">IT10</option>
+                                <option value="11" data-page-node-id="DzVCk2GUP5lOWRGfBlfrpY">IT11</option>
+                                <option value="12" data-page-node-id="Ekr0a1ponVKBBPs0iuoOSh">IT12</option>
+                                <option value="13" data-page-node-id="BQgqGIDd1oVGhs8D9lZdvE">IT13</option>
+                                <option value="14" data-page-node-id="dvryR5gBlRFFLvjYF6aZeb">IT14</option>
+                                <option value="15" data-page-node-id="dibarqyvXC0PjFcuAdX57Y">IT15</option>
+                                <option value="16" data-page-node-id="2knjhAcBjMtEM6twT8ex0D">IT16</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="quick-row" data-page-node-id="7iS95eFRvPCgfZKIveDpPL">
+                        <span class="quick-label" data-page-node-id="CXlrfpS1Q9ksteslALdsrL">常用组合:</span>
+                        <button class="chip" data-quick="H7" data-page-node-id="eZ78BRlFC1VlG2QoEZ5pb9">H7</button>
+                        <button class="chip" data-quick="h6" data-page-node-id="6QvHcd3wYDBEwXG4fhul7M">h6</button>
+                        <button class="chip" data-quick="H8" data-page-node-id="z07Y1EEgUdzCHoZi5RgQ2u">H8</button>
+                        <button class="chip" data-quick="h7" data-page-node-id="BiEPvhpezs70YNR3MzuYB8">h7</button>
+                        <button class="chip" data-quick="H9" data-page-node-id="GJZjxrgGR9FebvmxACy4CE">H9</button>
+                        <button class="chip" data-quick="g6" data-page-node-id="EemUxb6OCevqcoK7p3IWmK">g6</button>
+                        <button class="chip" data-quick="k6" data-page-node-id="PM6jvIrFjQECsjBQbA062c">k6</button>
+                        <button class="chip" data-quick="p6" data-page-node-id="YicE5bNCFhpEOGqknouLhx">p6</button>
+                        <button class="chip" data-quick="f7" data-page-node-id="vYMWD4e4dbpd0BzC691ah4">f7</button>
+                    </div>
+                </div>
+
+                <div id="single-result" class="result-card" style="display:none" data-page-node-id="qNkg2xqONKt1uiFrfhIofe"></div>
+                <div id="single-empty" class="empty-hint" data-page-node-id="KRcC2mnTEexZtJV6HTSoHp">
+                    <div style="font-size:48px" data-page-node-id="SgH9HxBFDd5rXgIcSpN24F">📐</div>
+                    <div data-page-node-id="2gNmWuN5i59b7ZJXOSqHZb">输入尺寸并选择偏差代号, 自动计算公差带</div>
+                </div>
+            </section>
+
+            <!-- 孔轴配合查询 -->
+            <section id="tab-fit" class="tab-panel" data-page-node-id="3LveUcVPGfCiVc1iqvce9s">
+                <div class="card" data-page-node-id="3DKwNLNyXq3GHkU9LQ03aw">
+                    <div class="card-title" data-page-node-id="SzzGeJ20u8ccJPp27asjOY">输入参数</div>
+                    <div class="form-row" data-page-node-id="Yfz7ZQskZHlbeFok4SosvM">
+                        <div class="form-group" data-page-node-id="wIlBZhsB6VbOmHyAyQtdVY">
+                            <label data-page-node-id="vVmVGDagvHwGPp0Xnw5yM0">基本尺寸 (mm)</label>
+                            <input type="number" id="fit-dim" value="50" step="0.01" min="0.01" max="500" data-page-node-id="9tPAFSuTZjn5VLDVh2R8dS">
+                        </div>
+                        <div class="form-group" data-page-node-id="YwPSelDE00urO6jfvtl1Bu">
+                            <label data-page-node-id="VLr9ZadyZkNcpnjqcWOYd6">孔代号</label>
+                            <input type="text" id="fit-hole" value="H7" maxlength="4" placeholder="如 H7" data-page-node-id="NRJMmyeVRWyR7XLEYJJsi0">
+                        </div>
+                        <div class="form-group" data-page-node-id="e1elcyEV5yHhax58CRoV2d">
+                            <label data-page-node-id="58rNCwdu7YsMDJ5SxjR0F0">轴代号</label>
+                            <input type="text" id="fit-shaft" value="g6" maxlength="4" placeholder="如 g6" data-page-node-id="eAQWyqnfLgJcAENZkj4esn">
+                        </div>
+                    </div>
+
+                    <div class="quick-row" data-page-node-id="U3LFaKlpYbi3G5qcIvMvCV">
+                        <span class="quick-label" data-page-node-id="hhBJChixCPVXXNtY6Ms6Ux">常用配合:</span>
+                        <button class="chip" data-fit="H7/g6" data-page-node-id="B1BpMoGAvzjv5oDTCZe1BO">H7/g6·间隙精密滑动</button>
+                        <button class="chip" data-fit="H7/h6" data-page-node-id="nXtcTAMA2r4jBHYDhnTtUK">H7/h6·间隙定位</button>
+                        <button class="chip" data-fit="H8/h7" data-page-node-id="kB4XZUSNf56nCCLNE4sbeJ">H8/h7·间隙中等</button>
+                        <button class="chip" data-fit="H7/f7" data-page-node-id="B1BpMoGAvzjv5oDTCZe1BO">H7/f7·间隙可转动</button>
+                        <button class="chip" data-fit="H8/f7" data-page-node-id="bOCyPSXlpJykeglOGERWeI">H8/f7·间隙可转动</button>
+                        <button class="chip" data-fit="H8/e8" data-page-node-id="y32ZwMO6Z0hLe3L0MKdX3N">H8/e8·间隙大间隙</button>
+                        <button class="chip" data-fit="H9/d9" data-page-node-id="SDMBHkwHH65BCKPVBfBkWo">H9/d9·间隙大间隙</button>
+                        <button class="chip" data-fit="H11/c11" data-page-node-id="2XudGdhTGfjgdmYEx3ETLw">H11/c11·间隙粗糙</button>
+                        <button class="chip" data-fit="H7/js6" data-page-node-id="y32ZwMO6Z0hLe3L0MKdX3N">H7/js6·过渡小间隙/过盈</button>
+                        <button class="chip" data-fit="H7/k6" data-page-node-id="y32ZwMO6Z0hLe3L0MKdX3N">H7/k6·过渡精确定位</button>
+                        <button class="chip" data-fit="H7/m6" data-page-node-id="B1BpMoGAvzjv5oDTCZe1BO">H7/m6·过渡稍紧</button>
+                        <button class="chip" data-fit="H7/n6" data-page-node-id="nXtcTAMA2r4jBHYDhnTtUK">H7/n6·过渡较紧</button>
+                        <button class="chip" data-fit="H7/p6" data-page-node-id="SDMBHkwHH65BCKPVBfBkWo">H7/p6·过盈轻</button>
+                        <button class="chip" data-fit="H7/r6" data-page-node-id="bOCyPSXlpJykeglOGERWeI">H7/r6·过盈中</button>
+                        <button class="chip" data-fit="H7/s6" data-page-node-id="2XudGdhTGfjgdmYEx3ETLw">H7/s6·过盈重</button>
+                        <button class="chip" data-fit="H7/u6" data-page-node-id="2XudGdhTGfjgdmYEx3ETLw">H7/u6·过盈重</button>
+                        <button class="chip" data-fit="F8/h7" data-page-node-id="B1BpMoGAvzjv5oDTCZe1BO">F8/h7·基轴制间隙</button>
+                        <button class="chip" data-fit="G7/h6" data-page-node-id="nXtcTAMA2r4jBHYDhnTtUK">G7/h6·基轴制小间隙</button>
+                        <button class="chip" data-fit="K7/h6" data-page-node-id="y32ZwMO6Z0hLe3L0MKdX3N">K7/h6·基轴制过渡</button>
+                        <button class="chip" data-fit="P7/h6" data-page-node-id="SDMBHkwHH65BCKPVBfBkWo">P7/h6·基轴制过盈</button>
+                    </div>
+                </div>
+
+                <div id="fit-result" class="result-card" style="display:none" data-page-node-id="Gx0trXlIA2T2yHWCpzxBlq"></div>
+                <div id="fit-empty" class="empty-hint" data-page-node-id="HLoF40kT2kEwtUHhIq6KCV">
+                    <div style="font-size:48px" data-page-node-id="x77GSvQTO3NqOrtYvCtrP7">⚙️</div>
+                    <div data-page-node-id="vaiWHBhE5ZCGSdfMDhDk0q">输入尺寸和孔轴代号, 自动计算配合公差</div>
+                </div>
+            </section>
+
+            <!-- 公差速查表 -->
+            <section id="tab-table" class="tab-panel" data-page-node-id="DcQc0DaiL7EBSKuu3s6uKp">
+                <div class="card" data-page-node-id="htwdn7VYowKqNXxZyRoZ1V">
+                    <div class="card-title" data-page-node-id="DO7AbpbDH715D4mgEtQ2Ww">IT 标准公差数值表 (μm)</div>
+                    <div class="table-wrap" data-page-node-id="HaQSYbefqMYlRIrIeNT5vI">
+                        <table class="data-table" id="it-table" data-page-node-id="VrqJhplNpp7RiMEBqIgtdr">
+                            <thead data-page-node-id="ZEA8aYhjVVRCwJPeaiv1ze"><tr id="it-thead" data-page-node-id="EYXuUlzEdpZiBRr8GmWzyU"></tr></thead>
+                            <tbody id="it-tbody" data-page-node-id="y70VaOHpfZvESz2tG2uHEs"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card" data-page-node-id="fpYUcXVcf445qn0V1DC7NT">
+                    <div class="card-title" data-page-node-id="QGRfvztT28kTAoJCmDlewO">常用配合特性速查</div>
+                    <div class="table-wrap" data-page-node-id="pHGWhyMZD6EYHyhCBuULNn">
+                        <table class="data-table" data-page-node-id="CzT4WtMFSCubOSJwUDMJmc">
+                            <thead data-page-node-id="liDjOd9R39N3yxX0rgfpzE">
+                                <tr data-page-node-id="ni6b1KkGZ6kAgfT1Dl7hAM"><th data-page-node-id="LXeGCwGIXBgkFGhL3Qh3CD">配合</th><th data-page-node-id="6C8kd0QMu2ztAYqM2cDgn5">性质</th><th data-page-node-id="b69ED0b4jqu8loBULyF6iN">应用场景</th></tr>
+                            </thead>
+                            <tbody data-page-node-id="qhgEqfAKE8BcQHlQgrSUJb">
+                                <tr data-page-node-id="7pMbpZLXGyWYtVMH2NePAI"><td data-page-node-id="hxeEjxTyYHOpsCaVxzCwOe"><strong data-page-node-id="DB3eHWFE3BZvC0nm1B16LS">H/g</strong></td><td data-page-node-id="iAbSjZ4Dexp0BzWTWw2xn8">滑动间隙</td><td data-page-node-id="KnccpjVMEdRNcaZLGdHPJL">滑阀, 一般滑动轴承</td></tr>
+                                <tr data-page-node-id="TEJHH7KXJXui7n88QJjCLT"><td data-page-node-id="k4sFvswEI2OtgzI0ye1ws3"><strong data-page-node-id="mpSf0iTV6F7CWJFWaLlEO6">H/h</strong></td><td data-page-node-id="ETQTSMrjS91r3QaKwztWP0">零间隙</td><td data-page-node-id="KwZF65koQA662nvhJlfNoX">精确定心, 可拆连接</td></tr>
+                                <tr data-page-node-id="15H8BClodoogWpQMICrQpe"><td data-page-node-id="NE1rPTDNFCZT607AaHrVNJ"><strong data-page-node-id="LVKZ3gRl6kYd0McmJC4wQv">H/k, H/js</strong></td><td data-page-node-id="pKwXb7BUQVnPtHxs1WiNYS">过渡</td><td data-page-node-id="ahJ8FHD0leSG8oliDEPLFN">键, 定位销 (可拆连接)</td></tr>
+                                <tr data-page-node-id="mAxkIBe9D3E42eMYGs9EsH"><td data-page-node-id="FmH8AdAx9uS3CrqC4ApEbP"><strong data-page-node-id="dfVRNhY3R0ZSgB3uhxi2nX">H/n, H/m</strong></td><td data-page-node-id="W18Cs6x1avuZiZAMmMWeoF">过渡/微过盈</td><td data-page-node-id="KrKZDkn8nlZER8HuhqRj7M">永久或半永久连接</td></tr>
+                                <tr data-page-node-id="T4riLLjhqQZ9LC9UR3GvvG"><td data-page-node-id="vkBHp0bHAMFZ6TVIalXxVW"><strong data-page-node-id="axrGN0VAVnWBe3GYofe2m8">H/p, H/r</strong></td><td data-page-node-id="5rLz0MhpGzNkEnj4EY1oxV">轻过盈</td><td data-page-node-id="6EnJIkvoYb4nldtyWdBZfr">永久连接 (压力装配)</td></tr>
+                                <tr data-page-node-id="lWi3ijlak3MGVmyJGIuBjd"><td data-page-node-id="2mfYuSmZlQ9mvAirGElw9o"><strong data-page-node-id="HP7pm7v53lcLI4TT57IDel">H/s, H/t</strong></td><td data-page-node-id="xAvlji4W4RNtJ9GUo3imwv">中等过盈</td><td data-page-node-id="Fmqs0MH3qteGT1QNFEG2dT">传递较大扭矩的连接</td></tr>
+                                <tr data-page-node-id="2tcB2D0yE2yRHyNPli9LIi"><td data-page-node-id="JiPHULOL5stwVchzBmPnFo"><strong data-page-node-id="UQisF3sPF3nRIRmFAWJYGm">H/u</strong></td><td data-page-node-id="B13G29nFMa6p5nOfXGXWv0">重过盈</td><td data-page-node-id="cwYLZ8XsjvOkbrGBu9BQiO">高温重载永久连接</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 参考数据 -->
+            <section id="tab-reference" class="tab-panel" data-page-node-id="DcQc0DaiL7EBSKuu3s6uKq">
+                <div class="card" data-page-node-id="htwdn7VYowKqNXxZyRoZ1W">
+                    <div class="card-title" data-page-node-id="DO7AbpbDH715D4mgEtQ2Wx">标准公差等级 (IT) 与加工方法</div>
+                    <div class="table-wrap" data-page-node-id="HaQSYbefqMYlRIrIeNT5vJ">
+                        <table class="data-table" data-page-node-id="VrqJhplNpp7RiMEBqIgtds">
+                            <thead data-page-node-id="ZEA8aYhjVVRCwJPeaiv1zf"><tr><th>IT 等级</th><th>加工方法 / 应用</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>IT01 ~ IT1</strong></td><td>量块、高精度基准、基准量规</td></tr>
+                                <tr><td><strong>IT2 ~ IT4</strong></td><td>高精度量规、检验用塞规、环规</td></tr>
+                                <tr><td><strong>IT5 ~ IT7</strong></td><td>磨削、精车、精镗、精铣、铰孔、拉削</td></tr>
+                                <tr><td><strong>IT8 ~ IT10</strong></td><td>普通车削、镗削、铣削、钻削、精冲</td></tr>
+                                <tr><td><strong>IT11 ~ IT13</strong></td><td>粗车、粗镗、钻削、冲压、压铸</td></tr>
+                                <tr><td><strong>IT14 ~ IT16</strong></td><td>铸造、锻造、焊接、砂型、热轧毛坯</td></tr>
+                                <tr><td><strong>IT17 ~ IT18</strong></td><td>粗毛坯、自由尺寸、非配合尺寸</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card" data-page-node-id="fpYUcXVcf445qn0V1DC7NU">
+                    <div class="card-title" data-page-node-id="QGRfvztT28kTAoJCmDlewP">常用优先配合及选用说明</div>
+                    <div class="table-wrap" data-page-node-id="pHGWhyMZD6EYHyhCBuULNo">
+                        <table class="data-table" data-page-node-id="CzT4WtMFSCubOSJwUDMJmd">
+                            <thead data-page-node-id="liDjOd9R39N3yxX0rgfpzF"><tr><th>配合</th><th>性质</th><th>典型应用场景</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>H7/g6</strong></td><td>间隙·精密滑动</td><td>精密导轨、滑阀、高精度滑动轴承</td></tr>
+                                <tr><td><strong>H7/h6</strong></td><td>间隙·定位</td><td>定心套、定位销、可拆精密连接</td></tr>
+                                <tr><td><strong>H8/h7</strong></td><td>间隙·中等</td><td>一般定位、导向、可拆连接</td></tr>
+                                <tr><td><strong>H7/f7</strong></td><td>间隙·可转动</td><td>齿轮、皮带轮、联轴器与轴</td></tr>
+                                <tr><td><strong>H8/f7</strong></td><td>间隙·可转动</td><td>一般旋转零件、轴承衬套</td></tr>
+                                <tr><td><strong>H8/e8</strong></td><td>间隙·大间隙</td><td>高速旋转、长跨距轴承、热膨胀补偿</td></tr>
+                                <tr><td><strong>H9/d9</strong></td><td>间隙·大间隙</td><td>农业机械、一般旋转件、粗糙配合</td></tr>
+                                <tr><td><strong>H11/c11</strong></td><td>间隙·粗糙</td><td>粗糙结构件、焊接件、非精密连接</td></tr>
+                                <tr><td><strong>H7/js6</strong></td><td>过渡·小间隙/过盈</td><td>经常拆卸的定位配合、定心精度要求高</td></tr>
+                                <tr><td><strong>H7/k6</strong></td><td>过渡·精确定位</td><td>齿轮、联轴器与轴（小过盈/间隙）</td></tr>
+                                <tr><td><strong>H7/m6</strong></td><td>过渡·稍紧</td><td>不需键传递扭矩的定心配合</td></tr>
+                                <tr><td><strong>H7/n6</strong></td><td>过渡·较紧</td><td>较大过盈的过渡配合、冲击载荷定心</td></tr>
+                                <tr><td><strong>H7/p6</strong></td><td>过盈·轻</td><td>小型齿轮、皮带轮与轴（压力装配）</td></tr>
+                                <tr><td><strong>H7/r6</strong></td><td>过盈·中</td><td>连杆衬套、蜗轮轮缘与轮毂</td></tr>
+                                <tr><td><strong>H7/s6</strong></td><td>过盈·重</td><td>传递大扭矩的永久连接</td></tr>
+                                <tr><td><strong>H7/u6</strong></td><td>过盈·重</td><td>重载、高温下的永久连接</td></tr>
+                                <tr><td><strong>F8/h7</strong></td><td>基轴制·间隙</td><td>采用基轴制时的间隙配合</td></tr>
+                                <tr><td><strong>G7/h6</strong></td><td>基轴制·小间隙</td><td>基轴制精密滑动、导向</td></tr>
+                                <tr><td><strong>K7/h6</strong></td><td>基轴制·过渡</td><td>基轴制定心、可拆连接</td></tr>
+                                <tr><td><strong>P7/h6</strong></td><td>基轴制·过盈</td><td>基轴制轻过盈、压力装配</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card" data-page-node-id="fpYUcXVcf445qn0V1DC7NV">
+                    <div class="card-title" data-page-node-id="QGRfvztT28kTAoJCmDlewQ">使用说明</div>
+                    <div class="table-wrap" data-page-node-id="pHGWhyMZD6EYHyhCBuULNp">
+                        <ol style="padding-left:20px;line-height:1.8;color:var(--text)">
+                            <li><strong>单尺寸公差查询</strong>：输入基本尺寸 (0.01 ~ 500 mm)，选择基本偏差代号（孔大写 A~JS、轴小写 a~u）和公差等级 IT01~IT16，结果自动显示上下偏差、极限尺寸和公差带图。</li>
+                            <li><strong>孔轴配合查询</strong>：输入基本尺寸后，直接输入孔、轴公差带代号（如 H7/g6），自动计算最大间隙/最小间隙、配合性质及配合公差带图。</li>
+                            <li><strong>颜色含义</strong>：绿色表示偏差/间隙值 ≥ 0；红色表示偏差/间隙值 &lt; 0（即过盈）。</li>
+                            <li><strong>速查表</strong>：提供 GB/T 1800.1-2009 常用 IT 等级公差数值及配合特性参考。</li>
+                            <li>本工具结果仅供工程参考，关键尺寸请以纸质标准 GB/T 1800.1-2009 或最新有效版本为准。</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" data-page-node-id="mqNL7GqHyayPBZTRitZNGz">
+            <div data-page-node-id="LsABF7TfKGmGRd8Ugtmmo1">本工具仅供参考, 关键设计请以纸质标准 GB/T 1800.1-2009 为准</div>
+        </footer>
+    </div>
+
+    <script src="tolerance-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
